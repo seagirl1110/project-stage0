@@ -1,0 +1,126 @@
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 50px;
+    color: #FFFFFF;
+    background-color: #000000;
+    width: 100%;
+}
+
+.container {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container--header {
+    display: flex;
+    background-image: url('assets/img/hero_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center 0;
+    padding: 19px 20px;
+}
+
+.logo__img {
+    display: block;
+    fill: #FFFFFF;
+    transition: all 0.3s;
+}
+
+.logo__img:hover {
+    fill: #BDAE82;
+}
+
+.menu {
+    margin: 0 15px 0 auto;
+}
+
+.menu__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu__link {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: all 0.3s;
+    padding: 0 15px;
+}
+
+.menu__link:hover {
+    color: #BDAE82;
+}
+
+.switch-lng {
+    font-weight: bold;
+}
+
+.switch-lng__link {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.switch-lng__link:hover,
+.switch-lng__link--active {
+    color: #BDAE82;
+}
+
+.switch-lng__element {
+    margin: 0 8px;
+}
+
+.hero {
+    background-image: url('assets/img/hero_bg.jpg');
+    background-position: center -90px;
+    background-repeat: no-repeat;
+    margin: 0 -20px;
+    padding: 160px 60px 330px;
+}
+
+.hero__title {
+    font-family: 'Merriweather', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 120px;
+    margin: 0 0 10px;
+}
+
+.hero__text {
+    line-height: 40px;
+    margin: 0 0 25px;
+    max-width: 470px;
+}
+
+.btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    line-height: 40px;
+    color: #000000;
+    background-color: #BDAE82;
+    width: 220px;
+    height: 55px;
+    border: none;
+    outline: none;
+    padding: 0;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: #FFFFFF;
+}
