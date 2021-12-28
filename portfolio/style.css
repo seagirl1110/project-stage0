@@ -204,3 +204,28 @@ body {
     text-align: center;
     margin: 0;
 }
+
+.portfolio__btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    gap: 5px;
+}
+
+.portfolio-btn {
+    color: #BDAE82;
+    background-color: #000000;
+    border: 2px solid #BDAE82;
+
+}
+
+.portfolio-btn--active {
+    color: #000000;
+    background-color: #BDAE82;
+}
+
+.portfolio__img-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
