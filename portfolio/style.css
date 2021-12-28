@@ -229,3 +229,19 @@ body {
     flex-wrap: wrap;
     gap: 25px;
 }
+
+.video__wrapper {
+    height: 705px;
+    background-image: url('./assets/img/video-player.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-btn__img {
+    fill: #FFFFFF;
+}
+
+.video-btn__img:hover {
+    fill: #BDAE82;
+}
