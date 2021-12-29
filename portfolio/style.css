@@ -39,12 +39,13 @@ body {
     transition: all 0.3s;
 }
 
-.logo__img:hover {
+.logo__img:hover,
+.logo__img:active {
     fill: #BDAE82;
 }
 
 .menu {
-    margin: 0 15px 0 auto;
+    margin: 0 17px 0 auto;
 }
 
 .menu__list {
@@ -61,7 +62,8 @@ body {
     padding: 0 15px;
 }
 
-.menu__link:hover {
+.menu__link:hover,
+.menu__link:active {
     color: #BDAE82;
 }
 
@@ -76,12 +78,13 @@ body {
 }
 
 .switch-lng__link:hover,
+.switch-lng__link:active,
 .switch-lng__link--active {
     color: #BDAE82;
 }
 
 .switch-lng__element {
-    margin: 0 8px;
+    margin: 0 3px 0 5px;
 }
 
 .section {
@@ -93,7 +96,7 @@ body {
     background-position: center -90px;
     background-repeat: no-repeat;
     margin: 0 -20px;
-    padding: 160px 60px 0;
+    padding: 160px 60px 0 80px;
     height: 820px;
 }
 
@@ -108,7 +111,7 @@ body {
 
 .hero__text {
     line-height: 40px;
-    margin: 0 0 25px;
+    margin: 0 0 26px;
     max-width: 470px;
 }
 
@@ -127,7 +130,8 @@ body {
     cursor: pointer;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:active {
     color: #FFFFFF;
 }
 
@@ -246,12 +250,19 @@ body {
     align-items: center;
 }
 
+.video-btn {
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
 .video-btn__img {
     fill: #FFFFFF;
     transition: all 0.3s;
 }
 
-.video-btn__img:hover {
+.video-btn__img:hover,
+.video-btn__img:active {
     fill: #BDAE82;
 }
 
@@ -269,7 +280,7 @@ body {
     width: 450px;
     border: 3px solid #BDAE82;
     text-align: center;
-    padding: 43px;
+    padding: 40px;
 }
 
 .card-price__title {
@@ -308,6 +319,7 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     margin: 0 -20px;
+    padding-top: 60px;
     height: 700px;
 }
 
@@ -318,16 +330,22 @@ body {
 
 .contacts__wrapper .section__title {
     padding: 0;
-    margin-bottom: 40px;
     background-color: rgba(0, 0, 0, 0);
 }
 
 .contacts__form {
     display: flex;
     flex-direction: column;
+    margin-top: 40px;
 }
 
 .contacts__input {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+    color: #BDAE82;
     background-color: rgba(0, 0, 0, 0.5);
     border: 2px solid #BDAE82;
     height: 50px;
@@ -350,16 +368,19 @@ body {
 }
 
 .footer {
-    padding: 20px 0;
+    padding: 50px 0;
 }
 
 .footer .container {
     display: flex;
-    justify-content: space-between;
 }
 
 .footer__year {
-    margin: 0 20px;
+    margin: 0 16px;
+}
+
+.footer__school {
+    margin: 0 auto 0 332px;
 }
 
 .footer__my-github,
@@ -370,14 +391,16 @@ body {
 }
 
 .footer__my-github:hover,
-.footer__school:hover {
+.footer__my-github:active,
+.footer__school:hover,
+.footer__school:active {
     color: #BDAE82;
     text-decoration: underline;
 }
 
 .social {
     display: flex;
-    gap: 10px;
+    gap: 19px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -386,10 +409,12 @@ body {
 
 .social-link__img {
     display: block;
+    width: 32px;
     fill: #FFFFFF;
     transition: all 0.3s;
 }
 
-.social-link__img:hover {
+.social-link__img:hover,
+.social-link__img:active {
     fill: #BDAE82;
 }
