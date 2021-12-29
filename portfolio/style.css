@@ -84,6 +84,10 @@ body {
     margin: 0 8px;
 }
 
+.section {
+    padding-top: 100px;
+}
+
 .hero {
     background-image: url('assets/img/hero_bg.jpg');
     background-position: center -90px;
@@ -130,7 +134,7 @@ body {
 .section__title-wrapper {
     position: relative;
     width: 50%;
-    margin: 100px auto 60px;
+    margin: 0 auto 60px;
     text-align: center;
 }
 
@@ -297,3 +301,57 @@ body {
 .card-price__btn {
     margin-top: 40px;
 }
+
+.contacts {
+    background-image: url('./assets/img/contacts_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0 -20px;
+    height: 700px;
+}
+
+.contacts__wrapper {
+    width: 450px;
+    margin: 0 20px 0 auto;
+}
+
+.contacts__wrapper .section__title {
+    padding: 0;
+    margin-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.contacts__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts__email {}
+
+.contacts__input {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #BDAE82;
+    height: 50px;
+    padding: 5px 20px;
+    margin-bottom: 20px;
+}
+
+.contacts__input::placeholder {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+    color: #BDAE82;
+}
+
+.contacts__tel {}
+
+.contacts__message {
+    height: 100px;
+    margin-bottom: 30px;
+}
+
+.contacts__btn {}
+
+.btn {}
