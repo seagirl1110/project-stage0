@@ -89,4 +89,30 @@
     .skills-item__text {
         line-height: 22px;
     }
+
+    .portfolio {
+        padding-top: 84px;
+    }
+
+    .portfolio__btn-wrapper {
+        width: 445px;
+        margin: 0 auto 60px;
+        padding-top: 15px;
+    }
+
+    .video .section__title-wrapper {
+        margin-bottom: 50px;
+    }
+
+    .video__wrapper {
+        margin: 0 -20px;
+        height: 418px;
+        background-position: -10px 0;
+    }
+
+    .video-btn__img {
+        width: 65px;
+        height: auto;
+    }
+
 }
