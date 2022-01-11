@@ -177,3 +177,34 @@
         margin-top: 31px;
     }
 }
+
+@media (max-width: 479px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .container--header {
+        padding: 20px 10px;
+    }
+
+    .section__title-wrapper {
+        width: 80%;
+    }
+
+    .portfolio__btn-wrapper {
+        width: 100%;
+    }
+
+    .portfolio__img {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-price {
+        width: 100%;
+    }
+
+    .contacts__wrapper {
+        width: 90%;
+    }
+}
