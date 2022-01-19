@@ -1,3 +1,5 @@
+import { i18Obj } from './translate.js';
+
 // hamburger-menu
 
 const hamburgerMenu = document.querySelector('[data-js="hamburger-menu"]');
@@ -31,8 +33,9 @@ function changeImage(event) {
     if (event.target.dataset.js === 'portfolio-btn') {
         portfolioBtns.forEach((btn) => btn.classList.remove('portfolio-btn--active'));
         event.target.classList.add('portfolio-btn--active');
-        const season = event.target.dataset.season;
+        const season = event.target.dataset.i18n;
         portfolioImages.forEach((img, index) => img.src = `./assets/img/${season}/${index + 1}.jpg`);
     }
 }
+
 
