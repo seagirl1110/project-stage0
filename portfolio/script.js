@@ -1,7 +1,7 @@
 // hamburger-menu
 
-const hamburgerMenu = document.querySelector('.hamburger-menu');
-const menu = document.querySelector('.menu');
+const hamburgerMenu = document.querySelector('[data-js="hamburger-menu"]');
+const menu = document.querySelector('[data-js="menu"]');
 
 hamburgerMenu.addEventListener('click', toggleMenu);
 menu.addEventListener('click', closeMenu);
@@ -12,7 +12,7 @@ function toggleMenu() {
 }
 
 function closeMenu(event) {
-    if (event.target.classList.contains('menu__link')) {
+    if (event.target.dataset.js === 'menu-link') {
         hamburgerMenu.classList.remove('hamburger-menu--open');
         menu.classList.remove('menu--open');
     }
@@ -21,14 +21,14 @@ function closeMenu(event) {
 
 // portfolio-seasonal-images
 
-const portfolioBtnWrapper = document.querySelector('.portfolio__btn-wrapper');
-const portfolioBtns = document.querySelectorAll('.portfolio-btn');
-const portfolioImages = document.querySelectorAll('.portfolio__img');
+const portfolioBtnWrapper = document.querySelector('[data-js="portfolio-btn-wrapper"]');
+const portfolioBtns = portfolioBtnWrapper.querySelectorAll('[data-js="portfolio-btn"]');
+const portfolioImages = document.querySelectorAll('[data-js="portfolio-img"]');
 
 portfolioBtnWrapper.addEventListener('click', changeImage);
 
 function changeImage(event) {
-    if (event.target.classList.contains('portfolio-btn')) {
+    if (event.target.dataset.js === 'portfolio-btn') {
         portfolioBtns.forEach((btn) => btn.classList.remove('portfolio-btn--active'));
         event.target.classList.add('portfolio-btn--active');
         const season = event.target.dataset.season;
