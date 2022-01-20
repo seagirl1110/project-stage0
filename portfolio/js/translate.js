@@ -80,4 +80,4 @@ const i18nObj = {
         'send-message': 'Отправить'
     }
 }
-export { i18nObj };
+export default i18nObj;

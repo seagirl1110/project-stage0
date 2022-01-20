@@ -1,4 +1,4 @@
-import { i18nObj } from './translate.js';
+import i18nObj from './translate.js';
 
 // hamburger-menu
 
@@ -31,8 +31,7 @@ portfolioBtnWrapper.addEventListener('click', changeImage);
 
 function changeImage(event) {
     if (event.target.dataset.js === 'portfolio-btn') {
-        portfolioBtns.forEach((btn) => btn.classList.remove('portfolio-btn--active'));
-        event.target.classList.add('portfolio-btn--active');
+        changeClassActive(portfolioBtns, event.target, 'portfolio-btn--active');
         const season = event.target.dataset.i18n;
         portfolioImages.forEach((img, index) => img.src = `./assets/img/${season}/${index + 1}.jpg`);
     }
@@ -46,11 +45,18 @@ const lngBtn = toggleLng.querySelectorAll('[data-js="toggle-lng-item"]');
 
 toggleLng.addEventListener('click', getTranslate);
 
-function getTranslate (event) {
+function getTranslate(event) {
     if (event.target.dataset.js === 'toggle-lng-item') {
-        lngBtn.forEach((btn) => btn.classList.remove('toggle-lng-item--active'));
-        event.target.classList.add('toggle-lng-item--active');
+        changeClassActive(lngBtn, event.target, 'toggle-lng-item--active');
         const lng = event.target.dataset.lng;
         i18nColl.forEach((item) => item.textContent = i18nObj[lng][item.dataset.i18n]);
     }
+}
+
+
+// item-active
+
+function changeClassActive(coll, item, classActive) {
+    coll.forEach((btn) => btn.classList.remove(classActive));
+    item.classList.add(classActive);
 }
