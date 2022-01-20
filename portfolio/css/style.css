@@ -69,23 +69,24 @@ body {
     color: #BDAE82;
 }
 
-.switch-lng {
+.toggle-lng {
     font-weight: bold;
 }
 
-.switch-lng__link {
+.toggle-lng-item {
     color: #FFFFFF;
     text-decoration: none;
     transition: all 0.3s;
+    cursor: pointer;
 }
 
-.switch-lng__link:hover,
-.switch-lng__link:active,
-.switch-lng__link--active {
+.toggle-lng-item:hover,
+.toggle-lng-item:active,
+.toggle-lng-item--active {
     color: #BDAE82;
 }
 
-.switch-lng__element {
+.toggle-lng__slash {
     margin: 0 3px 0 5px;
 }
 

@@ -1,4 +1,4 @@
-import { i18Obj } from './translate.js';
+import { i18nObj } from './translate.js';
 
 // hamburger-menu
 
@@ -39,3 +39,18 @@ function changeImage(event) {
 }
 
 
+// language-translater
+const i18nColl = document.querySelectorAll('[data-i18n]');
+const toggleLng = document.querySelector('[data-js="toggle-lng"]');
+const lngBtn = toggleLng.querySelectorAll('[data-js="toggle-lng-item"]');
+
+toggleLng.addEventListener('click', getTranslate);
+
+function getTranslate (event) {
+    if (event.target.dataset.js === 'toggle-lng-item') {
+        lngBtn.forEach((btn) => btn.classList.remove('toggle-lng-item--active'));
+        event.target.classList.add('toggle-lng-item--active');
+        const lng = event.target.dataset.lng;
+        i18nColl.forEach((item) => item.textContent = i18nObj[lng][item.dataset.i18n]);
+    }
+}

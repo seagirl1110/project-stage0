@@ -21,11 +21,11 @@
         background-size: auto 620px;
     }
 
-    .switch-lng {
+    .toggle-lng {
         margin-left: auto;
     }
 
-    .switch-lng__element {
+    .toggle-lng__slash {
         margin: 0 15px 0 5px;
     }
 

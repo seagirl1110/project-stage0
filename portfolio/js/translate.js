@@ -1,4 +1,4 @@
-const i18Obj = {
+const i18nObj = {
     'en': {
         'skills': 'Skills',
         'portfolio': 'Portfolio',
@@ -80,4 +80,4 @@ const i18Obj = {
         'send-message': 'Отправить'
     }
 }
-export { i18Obj };
+export { i18nObj };
