@@ -60,3 +60,13 @@ function changeClassActive(coll, item, classActive) {
     coll.forEach((btn) => btn.classList.remove(classActive));
     item.classList.add(classActive);
 }
+
+
+// color-theme
+
+const toggleTheme = document.querySelector('[data-js="toggle-theme"]');
+const body = document.querySelector('[data-js="body"]');
+
+toggleTheme.addEventListener('click', () => {
+    body.classList.toggle('light-theme');
+});

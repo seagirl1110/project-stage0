@@ -90,6 +90,22 @@ body {
     margin: 0 3px 0 5px;
 }
 
+.toggle-theme {
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.toggle-theme__img {
+    display: block;
+    fill: #FFFFFF;
+    transition: all 0.3s;
+}
+
+.toggle-theme__img:hover,
+.toggle-theme__img:active {
+    fill: #BDAE82;
+}
+
 .hamburger-menu {
     display: none;
     width: 50px;
@@ -399,12 +415,9 @@ body {
     margin-bottom: 30px;
 }
 
-.footer {
-    padding: 50px 0;
-}
-
 .footer .container {
     display: flex;
+    padding: 50px 20px;
 }
 
 .footer__year {
@@ -449,4 +462,43 @@ body {
 .social-link__img:hover,
 .social-link__img:active {
     fill: #BDAE82;
+}
+
+
+.light-theme {
+    background-color: #FFFFFF;
+}
+
+.light-theme .section__title {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+.light-theme .section__title-wrapper::before {
+    background-color: #000000;
+}
+
+.light-theme .skills,
+.light-theme .price {
+    color: #000000;
+}
+
+.light-theme .portfolio-btn {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+.light-theme .portfolio-btn:hover,
+.light-theme .portfolio-btn--active {
+    color: #FFFFFF;
+    background-color: #BDAE82;
+}
+
+.light-theme .contacts__wrapper .section__title {
+    color: #BDAE82;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.light-theme .footer .container {
+    background-color: #000000;
 }

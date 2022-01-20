@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="css/media.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@400;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="icon" href="assets/favicon.ico">
 </head>
 
-<body>
+<body data-js="body">
     <header class="header">
         <div class="container container--header">
             <a href="#" class="header__logo logo" target="_blank">
@@ -27,15 +28,21 @@
             </a>
             <nav class="header__menu menu" data-js="menu">
                 <ul class="menu__list">
-                    <li class="menu__item"><a href="#skills" class="menu__link" data-js="menu-link" data-i18n="skills">Skills</a></li>
-                    <li class="menu__item"><a href="#portfolio" class="menu__link" data-js="menu-link" data-i18n="portfolio">Portfolio</a></li>
-                    <li class="menu__item"><a href="#video" class="menu__link" data-js="menu-link" data-i18n="video">Video</a></li>
-                    <li class="menu__item"><a href="#price" class="menu__link" data-js="menu-link" data-i18n="price">Price</a></li>
-                    <li class="menu__item"><a href="#contacts" class="menu__link" data-js="menu-link" data-i18n="contacts">Contacts</a></li>
+                    <li class="menu__item"><a href="#skills" class="menu__link" data-js="menu-link"
+                            data-i18n="skills">Skills</a></li>
+                    <li class="menu__item"><a href="#portfolio" class="menu__link" data-js="menu-link"
+                            data-i18n="portfolio">Portfolio</a></li>
+                    <li class="menu__item"><a href="#video" class="menu__link" data-js="menu-link"
+                            data-i18n="video">Video</a></li>
+                    <li class="menu__item"><a href="#price" class="menu__link" data-js="menu-link"
+                            data-i18n="price">Price</a></li>
+                    <li class="menu__item"><a href="#contacts" class="menu__link" data-js="menu-link"
+                            data-i18n="contacts">Contacts</a></li>
                 </ul>
             </nav>
             <div class="header__toggle-lng toggle-lng" data-js="toggle-lng">
-                <span class="toggle-lng__item toggle-lng-item toggle-lng-item--active" data-js="toggle-lng-item" data-lng="en">en</span>
+                <span class="toggle-lng__item toggle-lng-item toggle-lng-item--active" data-js="toggle-lng-item"
+                    data-lng="en">en</span>
                 <span class="toggle-lng__slash">/</span>
                 <span class="toggle-lng__item toggle-lng-item" data-js="toggle-lng-item" data-lng="ru">ru</span>
             </div>
@@ -44,13 +51,29 @@
                 <span class="hamburger-menu__item hamburger-menu-item hamburger-menu-item--2"></span>
                 <span class="hamburger-menu__item hamburger-menu-item hamburger-menu-item--3"></span>
             </button>
+            <div class="header__toggle-theme toggle-theme" data-js="toggle-theme">
+                <svg class="toggle-theme__img" width="45" height="45" viewBox="0 0 45 45" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M22.8375 17.2125C23.95 17.2125 25.0376 17.5424 25.9626 18.1605C26.8876 18.7786 27.6086 19.6571 28.0343 20.6849C28.4601 21.7127 28.5715 22.8437 28.3544 23.9349C28.1374 25.026 27.6016 26.0283 26.815 26.815C26.0283 27.6016 25.026 28.1374 23.9349 28.3544C22.8437 28.5715 21.7127 28.4601 20.6849 28.0343C19.6571 27.6086 18.7786 26.8876 18.1605 25.9626C17.5424 25.0376 17.2125 23.95 17.2125 22.8375C17.2144 21.3462 17.8076 19.9166 18.8621 18.8621C19.9166 17.8076 21.3462 17.2144 22.8375 17.2125ZM22.8375 14.4C21.1687 14.4 19.5374 14.8949 18.1499 15.822C16.7623 16.7491 15.6809 18.0669 15.0423 19.6086C14.4037 21.1504 14.2366 22.8469 14.5621 24.4836C14.8877 26.1203 15.6913 27.6237 16.8713 28.8037C18.0513 29.9837 19.5547 30.7873 21.1914 31.1129C22.8281 31.4384 24.5246 31.2713 26.0664 30.6327C27.6081 29.9941 28.9259 28.9127 29.853 27.5251C30.7802 26.1376 31.275 24.5063 31.275 22.8375C31.275 20.5997 30.3861 18.4536 28.8037 16.8713C27.2214 15.2889 25.0753 14.4 22.8375 14.4Z" />
+                    <path d="M7.58531 9.58078L9.57375 7.59094L14.5041 12.5213L12.5156 14.5097L7.58531 9.58078Z" />
+                    <path d="M2.8125 21.1008H9.84375V23.9133H2.8125V21.1008Z" />
+                    <path d="M7.58531 35.4333L12.5156 30.503L14.5041 32.4928L9.57375 37.4217L7.58531 35.4333Z" />
+                    <path d="M21.0938 35.1633H23.9062V42.1945H21.0938V35.1633Z" />
+                    <path d="M30.4973 32.4928L32.4858 30.503L37.4161 35.4333L35.4277 37.4217L30.4973 32.4928Z" />
+                    <path d="M35.1562 21.1008H42.1875V23.9133H35.1562V21.1008Z" />
+                    <path d="M30.4973 12.5213L35.4277 7.59094L37.4161 9.58078L32.4858 14.5097L30.4973 12.5213Z" />
+                    <path d="M21.0938 2.81953H23.9062V9.85078H21.0938V2.81953Z" />
+                </svg>
+            </div>
         </div>
     </header>
     <main class="main">
         <div class="container">
             <section class="section section--hero hero">
                 <h1 class="hero__title" data-i18n="hero-title">Alexa Rise</h1>
-                <p class="hero__text" data-i18n="hero-text">Save sincere emotions, romantic feelings and happy moments of life together with
+                <p class="hero__text" data-i18n="hero-text">Save sincere emotions, romantic feelings and happy moments
+                    of life together with
                     professional photographer Alexa Rise</p>
                 <button class="hero__btn btn" data-i18n="hire">Hire me</button>
             </section>
@@ -61,19 +84,23 @@
                 <div class="skills__items-wrapper">
                     <div class="skills__item skills-item">
                         <h3 class="skills-item__title" data-i18n="skill-title-1">Digital photography</h3>
-                        <p class="skills-item__text" data-i18n="skill-text-1">High-quality photos in the studio and on the nature</p>
+                        <p class="skills-item__text" data-i18n="skill-text-1">High-quality photos in the studio and on
+                            the nature</p>
                     </div>
                     <div class="skills__item skills-item">
                         <h3 class="skills-item__title" data-i18n="skill-title-2">Video shooting</h3>
-                        <p class="skills-item__text" data-i18n="skill-text-2">Capture your moments so that they always stay with you</p>
+                        <p class="skills-item__text" data-i18n="skill-text-2">Capture your moments so that they always
+                            stay with you</p>
                     </div>
                     <div class="skills__item skills-item">
                         <h3 class="skills-item__title" data-i18n="skill-title-3">Retouch</h3>
-                        <p class="skills-item__text" data-i18n="skill-text-3">I strive to make photography surpass reality</p>
+                        <p class="skills-item__text" data-i18n="skill-text-3">I strive to make photography surpass
+                            reality</p>
                     </div>
                     <div class="skills__item skills-item">
                         <h3 class="skills-item__title" data-i18n="skill-title-4">Audio</h3>
-                        <p class="skills-item__text"  data-i18n="skill-text-4">Professional sounds recording for video, advertising, portfolio</p>
+                        <p class="skills-item__text" data-i18n="skill-text-4">Professional sounds recording for video,
+                            advertising, portfolio</p>
                     </div>
                 </div>
             </section>
@@ -82,10 +109,14 @@
                     <h2 class="section__title" data-i18n="portfolio">Portfolio</h2>
                 </div>
                 <div class="portfolio__btn-wrapper" data-js="portfolio-btn-wrapper">
-                    <button class="portfolio__btn btn portfolio-btn" data-js="portfolio-btn" data-i18n="winter">Winter</button>
-                    <button class="portfolio__btn btn portfolio-btn" data-js="portfolio-btn" data-i18n="spring">Spring</button>
-                    <button class="portfolio__btn btn portfolio-btn" data-js="portfolio-btn" data-i18n="summer">Summer</button>
-                    <button class="portfolio__btn btn portfolio-btn portfolio-btn--active" data-js="portfolio-btn" data-i18n="autumn">Autumn</button>
+                    <button class="portfolio__btn btn portfolio-btn" data-js="portfolio-btn"
+                        data-i18n="winter">Winter</button>
+                    <button class="portfolio__btn btn portfolio-btn" data-js="portfolio-btn"
+                        data-i18n="spring">Spring</button>
+                    <button class="portfolio__btn btn portfolio-btn" data-js="portfolio-btn"
+                        data-i18n="summer">Summer</button>
+                    <button class="portfolio__btn btn portfolio-btn portfolio-btn--active" data-js="portfolio-btn"
+                        data-i18n="autumn">Autumn</button>
                 </div>
                 <div class="portfolio__img-wrapper">
                     <img src="assets/img/autumn/1.jpg" alt="portfolio-img" class="portfolio__img" width="450"
@@ -126,7 +157,8 @@
                         <h4 class="card-price__subtitle">500 $</h4>
                         <span class="card-price__text" data-i18n="price-description-1-span-1">One location</span>
                         <span class="card-price__text" data-i18n="price-description-1-span-2">120 photos in color</span>
-                        <span class="card-price__text" data-i18n="price-description-1-span-3">12 photos in retouch</span>
+                        <span class="card-price__text" data-i18n="price-description-1-span-3">12 photos in
+                            retouch</span>
                         <span class="card-price__text" data-i18n="price-description-1-span-4">Readiness 2-3 weeks</span>
                         <span class="card-price__text" data-i18n="price-description-1-span-5">Make up, visage</span>
                         <button class="card-price__btn btn" data-i18n="order">Order shooting</button>
@@ -134,9 +166,11 @@
                     <article class="price__card card-price">
                         <h3 class="card-price__title">Premium</h3>
                         <h4 class="card-price__subtitle">700 $</h4>
-                        <span class="card-price__text" data-i18n="price-description-2-span-1">One or two locations</span>
+                        <span class="card-price__text" data-i18n="price-description-2-span-1">One or two
+                            locations</span>
                         <span class="card-price__text" data-i18n="price-description-2-span-2">200 photos in color</span>
-                        <span class="card-price__text" data-i18n="price-description-2-span-3">20 photos in retouch</span>
+                        <span class="card-price__text" data-i18n="price-description-2-span-3">20 photos in
+                            retouch</span>
                         <span class="card-price__text" data-i18n="price-description-2-span-4">Readiness 1-2 weeks</span>
                         <span class="card-price__text" data-i18n="price-description-2-span-5">Make up, visage</span>
                         <button class="card-price__btn btn" data-i18n="order">Order shooting</button>
@@ -144,11 +178,14 @@
                     <article class="price__card card-price">
                         <h3 class="card-price__title">Gold</h3>
                         <h4 class="card-price__subtitle">1000 $</h4>
-                        <span class="card-price__text" data-i18n="price-description-3-span-1">Three locations or more</span>
+                        <span class="card-price__text" data-i18n="price-description-3-span-1">Three locations or
+                            more</span>
                         <span class="card-price__text" data-i18n="price-description-3-span-2">300 photos in color</span>
-                        <span class="card-price__text" data-i18n="price-description-3-span-3">50 photos in retouch</span>
+                        <span class="card-price__text" data-i18n="price-description-3-span-3">50 photos in
+                            retouch</span>
                         <span class="card-price__text" data-i18n="price-description-3-span-4">Readiness 1 week</span>
-                        <span class="card-price__text" data-i18n="price-description-3-span-5">Make up, visage, hairstyle</span>
+                        <span class="card-price__text" data-i18n="price-description-3-span-5">Make up, visage,
+                            hairstyle</span>
                         <button class="card-price__btn btn" data-i18n="order">Order shooting</button>
                     </article>
                 </div>
