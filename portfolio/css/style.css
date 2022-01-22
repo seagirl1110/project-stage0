@@ -133,13 +133,15 @@ body {
 }
 
 .hero {
+    padding: 0;
+}
+
+.container--hero {
     background-image: url('../assets/img/hero_bg.jpg');
     background-position: center -90px;
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 0 -20px;
     padding: 160px 60px 330px 80px;
-
 }
 
 .hero__title {
@@ -362,18 +364,21 @@ body {
 }
 
 .contacts {
+    padding: 0;
+}
+
+.container--contacts {
     background-image: url('../assets/img/contacts_bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    margin: 0 -20px;
     padding-top: 60px;
     height: 700px;
 }
 
 .contacts__wrapper {
     width: 450px;
-    margin: 0 20px 0 auto;
+    margin: 0 0 0 auto;
 }
 
 .contacts__wrapper .section__title {
@@ -464,9 +469,19 @@ body {
     fill: #BDAE82;
 }
 
-
-.light-theme {
+.light-theme,
+.light-theme .skills,
+.light-theme .portfolio,
+.light-theme .video,
+.light-theme .price {
     background-color: #FFFFFF;
+}
+
+.light-theme .header,
+.light-theme .hero,
+.light-theme .contacts,
+.light-theme .footer {
+    background-color: #000000;
 }
 
 .light-theme .section__title {
@@ -497,8 +512,4 @@ body {
 .light-theme .contacts__wrapper .section__title {
     color: #BDAE82;
     background-color: rgba(0, 0, 0, 0);
-}
-
-.light-theme .footer .container {
-    background-color: #000000;
 }

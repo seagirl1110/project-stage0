@@ -46,11 +46,6 @@
                 <span class="toggle-lng__slash">/</span>
                 <span class="toggle-lng__item toggle-lng-item" data-js="toggle-lng-item" data-lng="ru">ru</span>
             </div>
-            <button class="header__hamburger-menu hamburger-menu" data-js="hamburger-menu">
-                <span class="hamburger-menu__item hamburger-menu-item hamburger-menu-item--1"></span>
-                <span class="hamburger-menu__item hamburger-menu-item hamburger-menu-item--2"></span>
-                <span class="hamburger-menu__item hamburger-menu-item hamburger-menu-item--3"></span>
-            </button>
             <div class="header__toggle-theme toggle-theme" data-js="toggle-theme">
                 <svg class="toggle-theme__img" width="45" height="45" viewBox="0 0 45 45" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -66,18 +61,26 @@
                     <path d="M21.0938 2.81953H23.9062V9.85078H21.0938V2.81953Z" />
                 </svg>
             </div>
+            <button class="header__hamburger-menu hamburger-menu" data-js="hamburger-menu">
+                <span class="hamburger-menu__item hamburger-menu-item hamburger-menu-item--1"></span>
+                <span class="hamburger-menu__item hamburger-menu-item hamburger-menu-item--2"></span>
+                <span class="hamburger-menu__item hamburger-menu-item hamburger-menu-item--3"></span>
+            </button>
+
         </div>
     </header>
     <main class="main">
-        <div class="container">
-            <section class="section section--hero hero">
+        <section class="section section--hero hero">
+            <div class="container container--hero">
                 <h1 class="hero__title" data-i18n="hero-title">Alexa Rise</h1>
                 <p class="hero__text" data-i18n="hero-text">Save sincere emotions, romantic feelings and happy moments
                     of life together with
                     professional photographer Alexa Rise</p>
                 <button class="hero__btn btn" data-i18n="hire">Hire me</button>
-            </section>
-            <section class="section section--skills skills" id="skills">
+            </div>
+        </section>
+        <section class="section section--skills skills" id="skills">
+            <div class="container">
                 <div class="section__title-wrapper">
                     <h2 class="section__title" data-i18n="skills">Skills</h2>
                 </div>
@@ -103,8 +106,10 @@
                             advertising, portfolio</p>
                     </div>
                 </div>
-            </section>
-            <section class="section section--portfolio portfolio" id="portfolio">
+            </div>
+        </section>
+        <section class="section section--portfolio portfolio" id="portfolio">
+            <div class="container">
                 <div class="section__title-wrapper">
                     <h2 class="section__title" data-i18n="portfolio">Portfolio</h2>
                 </div>
@@ -132,8 +137,10 @@
                     <img src="./assets/img/autumn/6.jpg" alt="portfolio-img" class="portfolio__img" width="450"
                         height="560" data-js="portfolio-img">
                 </div>
-            </section>
-            <section class="section section--video video" id="video">
+            </div>
+        </section>
+        <section class="section section--video video" id="video">
+            <div class="container">
                 <div class="section__title-wrapper">
                     <h2 class="section__title" data-i18n="video">Video</h2>
                 </div>
@@ -146,8 +153,10 @@
                         </svg>
                     </button>
                 </div>
-            </section>
-            <section class="section section--price price" id="price">
+            </div>
+        </section>
+        <section class="section section--price price" id="price">
+            <div class="container">
                 <div class="section__title-wrapper">
                     <h2 class="section__title" data-i18n="price">Price</h2>
                 </div>
@@ -189,8 +198,10 @@
                         <button class="card-price__btn btn" data-i18n="order">Order shooting</button>
                     </article>
                 </div>
-            </section>
-            <section class="section section--contacts contacts" id="contacts">
+            </div>
+        </section>
+        <section class="section section--contacts contacts" id="contacts">
+            <div class="container container--contacts">
                 <div class="contacts__wrapper">
                     <h2 class="section__title" data-i18n="contact-me">Contact me</h2>
                     <form class="contacts__form" action="#">
@@ -201,8 +212,8 @@
                         <button class="contacts__btn btn" data-i18n="send-message">Send message</button>
                     </form>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
     <footer class="footer">
         <div class="container">
