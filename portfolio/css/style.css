@@ -488,11 +488,11 @@ body {
     background-color: #000000;
 }
 
-.light-theme .menu__list {
+.light-theme .menu--open .menu__list {
     background-color: #FFFFFF;
 }
 
-.light-theme .menu__link {
+.light-theme .menu--open .menu__link {
     color: #000000;
 }
 

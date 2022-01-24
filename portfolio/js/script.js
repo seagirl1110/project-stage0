@@ -49,7 +49,14 @@ function getTranslate(event) {
     if (event.target.dataset.js === 'toggle-lng-item') {
         changeClassActive(lngBtn, event.target, 'toggle-lng-item--active');
         const lng = event.target.dataset.lng;
-        i18nColl.forEach((item) => item.textContent = i18nObj[lng][item.dataset.i18n]);
+        i18nColl.forEach((item) => {
+            if (item.placeholder) {
+                item.placeholder = i18nObj[lng][item.dataset.i18n];
+                item.textContent = '';
+            } else {
+                item.textContent = i18nObj[lng][item.dataset.i18n]
+            }
+        });
     }
 }
 
