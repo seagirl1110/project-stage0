@@ -31,7 +31,7 @@ portfolioBtnWrapper.addEventListener('click', changeImage);
 
 function changeImage(event) {
     const element = event.target;
-    if (element.target.dataset.js === 'portfolio-btn') {
+    if (element.dataset.js === 'portfolio-btn') {
         changeClassActive(portfolioBtns, element, 'portfolio-btn--active');
         const season = element.dataset.i18n;
         portfolioImages.forEach((img, index) => img.src = `./assets/img/${season}/${index + 1}.jpg`);
