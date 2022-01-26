@@ -1,7 +1,7 @@
 @media (max-width: 1319px) {
-.container--hero {
-    background-position: -100px 0;
-}
+    .container--hero {
+        background-position: -100px 0;
+    }
 
     .skills__items-wrapper {
         justify-content: space-around;
@@ -273,6 +273,10 @@
         height: auto;
     }
 
+    .video__wrapper {
+        margin: 0 -10px;
+    }
+
     .card-price {
         width: 100%;
     }
@@ -280,6 +284,7 @@
     .container--contacts {
         padding-top: 72px;
     }
+
     .contacts__wrapper {
         width: 90%;
     }
