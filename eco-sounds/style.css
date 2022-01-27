@@ -45,9 +45,19 @@ body {
 
 .nav-item {
     cursor: pointer;
+    transition: all 0.3ms;
 }
 
-.nav-item--active,
 .nav-item:hover {
+    color: #BDAF9D;
+    text-decoration: underline;
+}
+
+.header__logo:hover,
+.nav-item--active {
     filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+}
+
+.nav-item--active:hover {
+    filter: none;
 }
