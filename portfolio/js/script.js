@@ -102,7 +102,7 @@ window.addEventListener('load', () => {
     const lngBtn = toggleLng.querySelector(`[data-lng="${lng}"]`)
     changeClassActive(lngBtns, lngBtn, 'toggle-lng-item--active');
 
-    const theme = localStorage.getItem('theme') || 'light';
+    const theme = localStorage.getItem('theme') || 'dark';
     setTheme(theme);
 })
 
