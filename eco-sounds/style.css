@@ -88,6 +88,6 @@ body {
     filter: brightness(.85);
 }
 
-.btn-play--active {
+.btn-play--pause {
     background-image: url('./assets/svg/pause.svg');
 }
