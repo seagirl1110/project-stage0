@@ -61,3 +61,33 @@ body {
 .nav-item--active:hover {
     filter: none;
 }
+
+.main {
+    background-image: url('./assets/img/forest.jpg');
+    background-repeat: no-repeat;
+    height: calc(100vh - 120px);
+    min-height: 280px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-play {
+    width: 160px;
+    height: 160px;
+    background-image: url('./assets/svg/play.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+    transition: all 0.3s;
+}
+
+.btn-play:hover {
+    filter: brightness(.85);
+}
+
+.btn-play--active {
+    background-image: url('./assets/svg/pause.svg');
+}
