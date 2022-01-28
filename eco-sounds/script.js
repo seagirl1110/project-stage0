@@ -3,14 +3,17 @@
 const navContainer = document.querySelector('[data-js="nav-container"]');
 const navColl = navContainer.querySelectorAll('[data-js="nav-item"]');
 
-navContainer.addEventListener('click', changeClassActive);
-
-function changeClassActive(event) {
+navContainer.addEventListener('click', (event) => {
     const element = event.target;
     if (element.dataset.js === 'nav-item') {
-        navColl.forEach((item) => item.classList.remove('nav-item--active'));
-        element.classList.add('nav-item--active');
+        changeClassActive(element, 'nav-item--active');
+        pauseAudio();
     }
+});
+
+function changeClassActive(element, className) {
+    navColl.forEach((item) => item.classList.remove(className));
+    element.classList.add(className);
 }
 
 // audio
@@ -22,24 +25,22 @@ let isPlay = false;
 
 audioBtn.addEventListener('click', (event) => {
     const element = event.target;
-    toggleBtn(element);
-    playAudio();
+    const bird = document.querySelector('.nav-item--active');
+    if (!isPlay) {
+        playAudio(bird.dataset.bird);
+    } else { pauseAudio() }
 });
 
-function toggleBtn(element) {
-    element.classList.toggle('btn-play--pause');
+function playAudio(bird = 'forest') {
+    audio.src = `./assets/audio/${bird}.mp3`;
+    audio.currentTime = 0;
+    audio.play();
+    isPlay = true;
+    audioBtn.classList.add('btn-play--pause');
 }
 
-function playAudio() {
-   
-    audio.src = './assets/audio/forest.mp3';
-    audio.currentTime = 0;
-    if (!isPlay) {
-        audio.play();
-        isPlay = true;
-
-    } else {
-        audio.pause();
-        isPlay = false;
-    }
+function pauseAudio() {
+    audio.pause();
+    isPlay = false;
+    audioBtn.classList.remove('btn-play--pause');
 }
