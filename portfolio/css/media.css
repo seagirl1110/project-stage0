@@ -33,7 +33,7 @@
 
     .hamburger-menu {
         display: flex;
-        z-index: 2;
+        z-index: 20;
     }
 
     .menu {
@@ -42,7 +42,7 @@
         top: 0;
         bottom: 0;
         right: -100%;
-        z-index: 1;
+        z-index: 10;
         background-color: rgba(0, 0, 0, 0.5);
         width: 100%;
         margin-top: -20px;
@@ -72,6 +72,10 @@
     .menu--open {
         visibility: visible;
         right: 0;
+    }
+
+    .menu--open .menu__list {
+        overflow-y: scroll;
     }
 
     .section {
@@ -236,15 +240,15 @@
         right: 30px;
     }
 
-.menu {
-    font-size: 30px;
-    line-height: 50px;
-}
+    .menu {
+        font-size: 30px;
+        line-height: 50px;
+    }
 
-.menu__list {
-    padding-top: 125px;
-    padding-left: 80px;
-}
+    .menu__list {
+        padding-top: 125px;
+        padding-left: 80px;
+    }
 
     .container--hero {
         padding: 120px 10px 80px;
