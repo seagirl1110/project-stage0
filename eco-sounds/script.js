@@ -8,6 +8,7 @@ navContainer.addEventListener('click', (event) => {
     if (element.dataset.js === 'nav-item') {
         changeClassActive(element, 'nav-item--active');
         pauseAudio();
+        changeImage(element.dataset.bird);
     }
 });
 
@@ -15,6 +16,17 @@ function changeClassActive(element, className) {
     navColl.forEach((item) => item.classList.remove(className));
     element.classList.add(className);
 }
+
+
+// toggle background-image
+
+const main = document.querySelector('[data-js="main"]');
+
+function changeImage(bird = 'forest') {
+    const path = `./assets/img/${bird}.jpg`;
+    main.style.backgroundImage = `url(${path})`;
+}
+
 
 // audio
 
