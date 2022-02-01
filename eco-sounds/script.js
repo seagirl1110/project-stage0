@@ -8,7 +8,10 @@ navContainer.addEventListener('click', (event) => {
     if (element.dataset.js === 'nav-item') {
         changeClassActive(element, 'nav-item--active');
         pauseAudio();
+        playAudio(element.dataset.bird);
+        changeBgImage(element.dataset.bird);
         changeImage(element.dataset.bird);
+        
     }
 });
 
@@ -22,11 +25,19 @@ function changeClassActive(element, className) {
 
 const main = document.querySelector('[data-js="main"]');
 
-function changeImage(bird = 'forest') {
-    const path = `./assets/img/${bird}.jpg`;
+function changeBgImage(bird = 'forest') {
+    const path = `./assets/img/${bird}-bg.jpg`;
     main.style.backgroundImage = `url(${path})`;
 }
 
+// toogle image 
+
+const birdImage = document.querySelector('[data-js="bird"]');
+
+function changeImage(bird = 'forest') {
+    const path = `./assets/img/${bird}.jpg`;
+    birdImage.style.backgroundImage = `url(${path})`;
+}
 
 // audio
 

@@ -7,7 +7,7 @@ body {
     font-size: 22px;
     font-weight: normal;
     font-style: italic;
-    line-height: 50px;
+    line-height: 40px;
     width: 100%;
     margin: 0;
     background-color: #000000;
@@ -24,25 +24,28 @@ body {
 }
 
 .header__logo {
-    width: 50px;
+    width: 100%;
+    max-width: 50px;
     height: 50px;
     background-image: url('./assets/svg/logo.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    margin-right: 65px;
 }
 
 .nav-list {
     display: flex;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 5px 30px;
     margin: 0;
-    padding: 0;
+    padding: 5px 0;
     list-style: none;
 }
 
 .nav-item {
     cursor: pointer;
-    transition: all 0.3ms;
+    transition: all 0.3s;
 }
 
 .nav-item:hover {
@@ -60,7 +63,7 @@ body {
 }
 
 .main {
-    background-image: url('./assets/img/forest.jpg');
+    background-image: url('./assets/img/forest-bg.jpg');
     background-repeat: no-repeat;
     height: calc(100vh - 120px);
     min-height: 280px;
@@ -68,6 +71,21 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+.main__bird {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    background-image: url('./assets/img/forest.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-top-right-radius: 25px;
 }
 
 .btn-play {
@@ -78,7 +96,9 @@ body {
     background-size: contain;
     background-color: transparent;
     border: none;
+    outline: none;
     transition: all 0.3s;
+    z-index: 1;
 }
 
 .btn-play:hover {
@@ -92,6 +112,10 @@ body {
 .footer {
     font-size: 20px;
     font-style: normal;
+}
+
+.footer__item {
+    padding: 5px 0;
 }
 
 .footer__year {
