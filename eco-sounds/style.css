@@ -99,6 +99,7 @@ body {
     outline: none;
     transition: all 0.3s;
     z-index: 1;
+    cursor: pointer;
 }
 
 .btn-play:hover {
