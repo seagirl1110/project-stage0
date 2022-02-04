@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway';
+    font-size: 22px;
+    font-weight: normal;
+    font-style: italic;
+    line-height: 40px;
+    width: 100%;
+    margin: 0;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.container {
+    width: calc(100% - 40px);
+    max-width: 1440px;
+    padding: 5px 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo {
+    width: 100%;
+    max-width: 50px;
+    height: 50px;
+    background-image: url('./assets/svg/logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 65px;
+}
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 30px;
+    margin: 0;
+    padding: 5px 0;
+    list-style: none;
+}
+
+.nav-item {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.nav-item:hover {
+    color: #BDAF9D;
+    text-decoration: underline;
+}
+
+.header__logo:hover,
+.nav-item--active {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+}
+
+.nav-item--active:hover {
+    filter: none;
+}
+
+.main {
+    background-image: url('./assets/img/forest-bg.jpg');
+    background-repeat: no-repeat;
+    height: calc(100vh - 120px);
+    min-height: 280px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.main__bird {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    background-image: url('./assets/img/forest.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-top-right-radius: 25px;
+}
+
+.btn-play {
+    width: 160px;
+    height: 160px;
+    background-image: url('./assets/svg/play.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: all 0.3s;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.btn-play:hover {
+    filter: brightness(.85);
+}
+
+.btn-play--pause {
+    background-image: url('./assets/svg/pause.svg');
+}
+
+.footer {
+    font-size: 20px;
+    font-style: normal;
+}
+
+.footer__item {
+    padding: 5px 0;
+}
+
+.footer__year {
+    margin: 0 20px;
+}
+
+.footer__my-github {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.footer__my-github:hover {
+    color: #bdae82;
+    text-decoration: underline;
+}
+
+.footer__school {
+    width: 135px;
+    height: 50px;
+    background-image: url('./assets/svg/rss.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 0.3s;
+}
+
+.footer__school:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+}
