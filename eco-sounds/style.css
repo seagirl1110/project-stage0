@@ -111,6 +111,7 @@ body {
 
 .btn-play--pause {
     background-image: url('./assets/svg/pause.svg');
+    z-index: 10;
 }
 
 .footer {
