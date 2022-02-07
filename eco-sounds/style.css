@@ -72,6 +72,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+    z-index: 1;
 }
 
 .main__bird {
@@ -86,7 +87,7 @@ body {
     background-size: contain;
     background-position: center;
     border-top-right-radius: 25px;
-    z-index: 1;
+    z-index: 3;
 }
 
 .btn-play {
