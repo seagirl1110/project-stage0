@@ -72,7 +72,6 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    z-index: 1;
 }
 
 .main__bird {
@@ -87,7 +86,6 @@ body {
     background-size: contain;
     background-position: center;
     border-top-right-radius: 25px;
-    z-index: 3;
 }
 
 .btn-play {
@@ -107,12 +105,11 @@ body {
 
 .btn-play:hover {
     filter: brightness(.85);
-    z-index: 10;
+    transform: scale(1.1);
 }
 
 .btn-play--pause {
     background-image: url('./assets/svg/pause.svg');
-    z-index: 10;
 }
 
 .footer {
