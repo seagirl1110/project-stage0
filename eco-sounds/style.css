@@ -106,7 +106,8 @@ body {
 }
 
 .btn-play:hover {
-    filter: brightness(.85);
+    transform: scale(1.1);
+    opacity: 0.8;
     z-index: 10;
 }
 
