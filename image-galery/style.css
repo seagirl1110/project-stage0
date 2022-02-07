@@ -17,12 +17,16 @@ body {
     border-bottom: 5px solid #ffa500;
 }
 
-.header__container {
+.container {
     width: 100%;
     max-width: 1280px;
-    padding: 17px 20px;
+    padding: 0 20px;
     margin: 0 auto;
     display: flex;
+}
+
+.container--header {
+    padding: 17px 20px;
 }
 
 .header__logo {
@@ -50,4 +54,15 @@ body {
     font-style: normal;
     font-weight: normal;
     color: #000000;
+}
+
+.container--main {
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.gallery__img {
+    width: 380px;
+    height: 214px;
+    margin: 10px;
 }
