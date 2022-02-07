@@ -8,8 +8,8 @@ body {
     line-height: 50px;
     font-style: normal;
     font-weight: normal;
-    color: #FFFFFF;
-    background-color: #000000;
+    color: #000000;
+    background-color: #FFFFFF;
     margin: 0;
 }
 
@@ -36,13 +36,14 @@ body {
     background-image: url('./assets/logo.svg');
     background-repeat: no-repeat;
     background-size: contain;
+    filter: invert(26%) sepia(30%) saturate(838%);
 }
 
 .header__title {
     font-size: 32px;
     line-height: 35px;
     font-weight: bold;
-    margin: 0 auto 0 10px;
+    margin: 0 auto 0 15px;
 }
 
 .header__search {
@@ -81,13 +82,13 @@ body {
 }
 
 .footer__my-github {
-    color: #FFFFFF;
+    color: #000000;
     text-decoration: none;
     transition: all 0.3s;
 }
 
 .footer__my-github:hover {
-    color: #bdae82;
+    color: #ffa500;
     text-decoration: underline;
 }
 
@@ -98,8 +99,9 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     transition: all 0.3s;
+    filter: invert(90%);
 }
 
 .footer__school:hover {
-    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+    filter: invert(30%) sepia(25%) saturate(838%);
 }
