@@ -20,9 +20,10 @@ body {
 .container {
     width: 100%;
     max-width: 1280px;
-    padding: 0 20px;
+    padding: 10px 20px;
     margin: 0 auto;
     display: flex;
+    justify-content: space-between;
 }
 
 .container--header {
@@ -58,11 +59,47 @@ body {
 
 .container--main {
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .gallery__img {
     width: 380px;
     height: 214px;
     margin: 10px;
+}
+
+.footer {
+    font-size: 20px;
+}
+
+.footer__item {
+    padding: 5px 0;
+}
+
+.footer__year {
+    margin: 0 20px;
+}
+
+.footer__my-github {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.footer__my-github:hover {
+    color: #bdae82;
+    text-decoration: underline;
+}
+
+.footer__school {
+    width: 135px;
+    height: 50px;
+    background-image: url('./assets/rss.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 0.3s;
+}
+
+.footer__school:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
