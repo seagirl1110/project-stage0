@@ -24,10 +24,7 @@ body {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-}
-
-.container--header {
-    padding: 17px 20px;
+    align-items: center;
 }
 
 .header__logo {
@@ -46,9 +43,15 @@ body {
     margin: 0 auto 0 15px;
 }
 
+.header__search-wrapper {
+    position: relative;
+}
+
 .header__search {
     width: 350px;
     border-radius: 25px;
+    border: 1px solid #ffa500;
+    outline: none;
     padding: 5px 15px;
     font-family: 'Comfortaa', cursive;
     font-size: 18px;
@@ -56,6 +59,31 @@ body {
     font-style: normal;
     font-weight: normal;
     color: #000000;
+    transition: all 0.3s;
+}
+
+.header__search:hover,
+.header__search:focus {
+    box-shadow: 0 0 5px #ffa500;
+}
+
+.header__search-btn {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 13px;
+    right: 35px;
+    background-image: url('./assets/search.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.header__search-btn:hover {
+    filter: invert(30%) sepia(25%) saturate(838%);
 }
 
 .container--main {

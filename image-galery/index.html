@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./assets/favicon.ico">
-    <title>Image-galery</title>
+    <title>Image-gallery</title>
 </head>
 
 <body>
@@ -18,7 +18,11 @@
         <div class="container container--header">
             <div class="header__logo"></div>
             <h1 class="header__title">Unsplash API</h1>
-            <input class="header__search" type="search" placeholder="Search...">
+            <div class="header__search-wrapper">
+                <input class="header__search" type="search" placeholder="Search..." data-js="search" autofocus autocomplete="off">
+                <button class="header__search-btn" data-js="search-btn"></button>
+            </div>
+            
         </div>
     </header>
     <main class="main">
