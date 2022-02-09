@@ -2,7 +2,7 @@ const search = document.querySelector('[data-js="search"]');
 const searchBtn = document.querySelector('[data-js="search-btn"]');
 
 search.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {getResult()}
+    if (event.key === 'Enter') { getResult() }
 })
 searchBtn.addEventListener('click', getResult);
 
@@ -12,7 +12,11 @@ async function getResult() {
     const result = await getData();
     const collImages = result.results;
     const galleryContainer = document.querySelector('[data-js="gallery"]');
-    addImage(collImages, galleryContainer);
+    if (collImages.length > 0) {
+        addImage(collImages, galleryContainer);
+    } else {
+        galleryContainer.innerHTML = '<div class="gallery__no-image">По Вашему запросу изображения не найдены. Смените запрос.</div>'
+    }
 }
 
 async function getData() {

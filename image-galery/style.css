@@ -97,6 +97,17 @@ body {
     margin: 10px;
 }
 
+.gallery__no-image {
+    width: 700px;
+    height: 250px;
+    margin: 20px;
+    padding: 40px 20px;
+    border: 1px solid #ffa500;
+    border-radius: 10px;
+    text-align: center;
+    background-color: antiquewhite;
+}
+
 .footer {
     font-size: 20px;
 }
