@@ -1,8 +1,8 @@
 const search = document.querySelector('[data-js="search"]');
 const searchBtn = document.querySelector('[data-js="search-btn"]');
 
-search.addEventListener('keydown', (key) => {
-    if (key.keyCode === 13) {getResult()}
+search.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {getResult()}
 })
 searchBtn.addEventListener('click', getResult);
 
