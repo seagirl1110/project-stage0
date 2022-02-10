@@ -1,3 +1,5 @@
+const API_KEY = 'yXmAysdmTYy38N4hL77lPTfbFnkmp-bViqWGwn2CQmo';
+
 const search = document.querySelector('[data-js="search"]');
 const searchBtn = document.querySelector('[data-js="search-btn"]');
 
@@ -28,9 +30,9 @@ async function getData() {
 
 function getUrl(value) {
     if (value.length > 0) {
-        url = `https://api.unsplash.com/search/photos?query=${value}&per_page=12&orientation=landscape&client_id=SouHY7Uul-OxoMl3LL3c0NkxUtjIrKwf3tsGk1JaiVo`;
+        url = `https://api.unsplash.com/search/photos?query=${value}&per_page=30&tag_mode=all&orientation=landscape&client_id=${API_KEY}`;
     } else {
-        url = 'https://api.unsplash.com/search/photos?query=spring&per_page=12&orientation=landscape&client_id=SouHY7Uul-OxoMl3LL3c0NkxUtjIrKwf3tsGk1JaiVo';
+        url = `https://api.unsplash.com/search/photos?query=cat&per_page=30&tag_mode=all&orientation=landscape&client_id=${API_KEY}`;
     }
     return url;
 }
@@ -61,4 +63,4 @@ console.log(`+ 1. Вёрстка +10
     + e) после отправки поискового запроса и отображения результатов поиска, поисковый запрос продолжает отображаться в поле ввода +5
     + f) в поле ввода есть крестик при клике по которому поисковый запрос из поля ввода удаляется и отображается placeholder +5
 + 5) Очень высокое качество оформления приложения и/или дополнительный не предусмотренный в задании функционал, улучшающий качество приложения +10
-    * Добавлен блок "если изображения не найдены".`);
+    * Добавлен блок "если по введенной в поисковой строке информации не найдены изображения".`);
