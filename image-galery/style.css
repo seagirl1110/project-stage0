@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comfortaa', cursive;
+    font-size: 22px;
+    line-height: 50px;
+    font-style: normal;
+    font-weight: normal;
+    color: #000000;
+    background-color: #FFFFFF;
+    margin: 0;
+}
+
+.header {
+    border-bottom: 5px solid #ffa500;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    padding: 10px 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    width: 39px;
+    height: 32px;
+    background-image: url('./assets/logo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: invert(26%) sepia(30%) saturate(838%);
+}
+
+.header__title {
+    font-size: 32px;
+    line-height: 35px;
+    font-weight: bold;
+    margin: 0 auto 0 15px;
+}
+
+.header__search-wrapper {
+    position: relative;
+}
+
+.header__search {
+    width: 350px;
+    border-radius: 25px;
+    border: 1px solid #ffa500;
+    outline: none;
+    padding: 5px 15px;
+    font-family: 'Comfortaa', cursive;
+    font-size: 18px;
+    line-height: 20px;
+    font-style: normal;
+    font-weight: normal;
+    color: #000000;
+    transition: all 0.3s;
+}
+
+.header__search:hover,
+.header__search:focus {
+    box-shadow: 0 0 5px #ffa500;
+}
+
+.header__search-btn {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 13px;
+    right: 35px;
+    background-image: url('./assets/search.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.header__search-btn:hover {
+    filter: invert(30%) sepia(25%) saturate(838%);
+}
+
+.container--main {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.gallery__img {
+    width: 380px;
+    height: 214px;
+    margin: 10px;
+}
+
+.gallery__no-image {
+    width: 700px;
+    height: 250px;
+    margin: 20px;
+    padding: 40px 20px;
+    border: 1px solid #ffa500;
+    border-radius: 10px;
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+.footer {
+    font-size: 20px;
+}
+
+.footer__item {
+    padding: 5px 0;
+}
+
+.footer__year {
+    margin: 0 20px;
+}
+
+.footer__my-github {
+    color: #000000;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.footer__my-github:hover {
+    color: #ffa500;
+    text-decoration: underline;
+}
+
+.footer__school {
+    width: 135px;
+    height: 50px;
+    background-image: url('./assets/rss.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 0.3s;
+    filter: invert(90%);
+}
+
+.footer__school:hover {
+    filter: invert(30%) sepia(25%) saturate(838%);
+}
