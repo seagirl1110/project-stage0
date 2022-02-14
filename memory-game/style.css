@@ -8,7 +8,12 @@ body {
     background-color: #2F4274;
 }
 
+.game__cards {
+    margin: auto;
+}
+
 .cards {
+    max-width: 800px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -34,4 +39,56 @@ body {
 
 .card-img--back {
     display: none;
+}
+
+.footer {
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+    line-height: 50px;
+    font-style: normal;
+    font-weight: normal;
+    color: #000000;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    padding: 10px 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__item {
+    padding: 5px 0;
+}
+
+.footer__year {
+    margin: 0 20px;
+}
+
+.footer__my-github {
+    color: #000000;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.footer__my-github:hover {
+    color: #ffa500;
+    text-decoration: underline;
+}
+
+.footer__school {
+    width: 135px;
+    height: 50px;
+    background-image: url('./assets/svg/rss.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 0.3s;
+    filter: invert(90%);
+}
+
+.footer__school:hover {
+    filter: invert(30%) sepia(25%) saturate(838%);
 }
