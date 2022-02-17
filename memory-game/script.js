@@ -9,8 +9,9 @@ cards.forEach((card) => {
 })
 
 function flipCard(evt) {
-    if (cardsBlocked) return true;
+    if (cardsBlocked) return;
     const elem = evt.currentTarget;
+    if (elem === firstCard) return;
     elem.classList.add('card--flip');
     if (!hasFlippedCard) {
         firstCard = elem;
@@ -24,23 +25,23 @@ function flipCard(evt) {
 }
 
 function checkForMatch() {
-    if (firstCard.dataset.animal === secondCard.dataset.animal) {
-        disableCards();
-    } else {
-        unflipCards();
-    }
+    firstCard.dataset.animal === secondCard.dataset.animal ? disableCards() : unflipCards()
 }
 
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
-    cardsBlocked = false;
+    resetCards();
 }
 
 function unflipCards() {
     setTimeout(() => {
         firstCard.classList.remove('card--flip');
         secondCard.classList.remove('card--flip');
-        cardsBlocked = false;
-    }, 1500)
+        resetCards();
+    }, 1000)
+}
+
+function resetCards() {
+    [firstCard, secondCard, cardsBlocked] = [null, null, false];
 }
