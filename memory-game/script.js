@@ -1,5 +1,6 @@
 const cards = document.querySelectorAll('[data-js="card"]');
 let hasFlippedCard = false;
+let cardsBlocked = false;
 let firstCard;
 let secondCard;
 
@@ -8,6 +9,7 @@ cards.forEach((card) => {
 })
 
 function flipCard(evt) {
+    if (cardsBlocked) return true;
     const elem = evt.currentTarget;
     elem.classList.add('card--flip');
     if (!hasFlippedCard) {
@@ -16,6 +18,7 @@ function flipCard(evt) {
     } else {
         secondCard = elem;
         hasFlippedCard = false;
+        cardsBlocked = true;
         checkForMatch();
     }
 }
@@ -31,11 +34,13 @@ function checkForMatch() {
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
+    cardsBlocked = false;
 }
 
 function unflipCards() {
     setTimeout(() => {
         firstCard.classList.remove('card--flip');
         secondCard.classList.remove('card--flip');
+        cardsBlocked = false;
     }, 1500)
 }
