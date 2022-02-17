@@ -1,11 +1,17 @@
-const cards = document.querySelectorAll('[data-js="card"]');
+const body = document.querySelector('body');
+const resultBlock = body.querySelector('[data-js="result-block"]')
+const score = resultBlock.querySelector('[data-js="score"]');
+
+const cards = body.querySelectorAll('[data-js="card"]');
+
 let hasFlippedCard = false;
 let cardsBlocked = false;
 let firstCard;
 let secondCard;
-let stepCount = 0;
+
 const cardCount = 6;
 let flipCardCount = 0;
+let stepCount = 0;
 
 shuffle();
 
@@ -42,7 +48,7 @@ function checkForMatch() {
         disableCards();
         flipCardCount += 2;
         if (flipCardCount === cardCount) {
-            console.log(`результат ${stepCount}`);
+            finishGame();
         }
     } else { unflipCards() }
 }
@@ -63,4 +69,10 @@ function unflipCards() {
 
 function resetCards() {
     [firstCard, secondCard, cardsBlocked] = [null, null, false];
+}
+
+function finishGame() {
+    body.style.backgroundColor = '#6699FF';
+    resultBlock.classList.add('result--visible');
+    score.innerHTML = `Количество ходов, за которое Вы прошли игру: ${stepCount}`;
 }
