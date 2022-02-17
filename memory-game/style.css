@@ -16,6 +16,7 @@ body {
     max-width: 800px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .cards__item {
@@ -31,6 +32,7 @@ body {
     align-items: center;
     transition: all 0.4s;
     transform-style: preserve-3d;
+    cursor: pointer;
 }
 
 .card:active {
@@ -49,6 +51,7 @@ body {
     height: 100%;
     padding: 10px;
     backface-visibility: hidden;
+    transition: all 0.4s;
 }
 
 .card-img--front {
