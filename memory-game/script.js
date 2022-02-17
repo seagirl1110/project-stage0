@@ -16,16 +16,21 @@ function flipCard(evt) {
     } else {
         secondCard = elem;
         hasFlippedCard = false;
-        checkForMatch()
+        checkForMatch();
     }
 }
 
 function checkForMatch() {
-    console.log(firstCard.dataset.animal);
-    if (firstCard.dataset.animal !== secondCard.dataset.animal) {
-        console.log(secondCard.dataset.animal);
-        unflipCards()
+    if (firstCard.dataset.animal === secondCard.dataset.animal) {
+        disableCards();
+    } else {
+        unflipCards();
     }
+}
+
+function disableCards() {
+    firstCard.removeEventListener('click', flipCard);
+    secondCard.removeEventListener('click', flipCard);
 }
 
 function unflipCards() {
