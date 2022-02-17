@@ -3,6 +3,16 @@ let hasFlippedCard = false;
 let cardsBlocked = false;
 let firstCard;
 let secondCard;
+let stepCount = 0;
+
+shuffle();
+
+function shuffle() {
+    cards.forEach((card) => {
+        let numRandom = Math.floor(Math.random() * 30);
+        card.style.order = numRandom;
+    })
+}
 
 cards.forEach((card) => {
     card.addEventListener('click', flipCard)
@@ -20,6 +30,8 @@ function flipCard(evt) {
         secondCard = elem;
         hasFlippedCard = false;
         cardsBlocked = true;
+        stepCount += 1;
+        console.log(stepCount);
         checkForMatch();
     }
 }
