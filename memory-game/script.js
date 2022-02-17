@@ -4,8 +4,14 @@ let cardsBlocked = false;
 let firstCard;
 let secondCard;
 let stepCount = 0;
+const cardCount = 6;
+let flipCardCount = 0;
 
 shuffle();
+
+cards.forEach((card) => {
+    card.addEventListener('click', flipCard)
+})
 
 function shuffle() {
     cards.forEach((card) => {
@@ -13,10 +19,6 @@ function shuffle() {
         card.style.order = numRandom;
     })
 }
-
-cards.forEach((card) => {
-    card.addEventListener('click', flipCard)
-})
 
 function flipCard(evt) {
     if (cardsBlocked) return;
@@ -31,13 +33,18 @@ function flipCard(evt) {
         hasFlippedCard = false;
         cardsBlocked = true;
         stepCount += 1;
-        console.log(stepCount);
         checkForMatch();
     }
 }
 
 function checkForMatch() {
-    firstCard.dataset.animal === secondCard.dataset.animal ? disableCards() : unflipCards()
+    if (firstCard.dataset.animal === secondCard.dataset.animal) {
+        disableCards();
+        flipCardCount += 2;
+        if (flipCardCount === cardCount) {
+            console.log(`результат ${stepCount}`);
+        }
+    } else { unflipCards() }
 }
 
 function disableCards() {
