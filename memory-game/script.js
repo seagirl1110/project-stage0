@@ -1,9 +1,12 @@
 const body = document.querySelector('body');
+
+const cards = body.querySelectorAll('[data-js="card"]');
+
 const resultBlock = body.querySelector('[data-js="result-block"]')
 const currentScore = resultBlock.querySelector('[data-js="current-score"]');
 const resultTable = resultBlock.querySelector('[data-js="result-table"]');
 
-const cards = body.querySelectorAll('[data-js="card"]');
+const restart = body.querySelector('[data-js="restart"]')
 
 let hasFlippedCard = false;
 let cardsBlocked = false;
@@ -19,6 +22,8 @@ shuffle();
 cards.forEach((card) => {
     card.addEventListener('click', flipCard)
 })
+
+restart.addEventListener('click', startGame);
 
 function shuffle() {
     cards.forEach((card) => {
