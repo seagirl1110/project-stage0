@@ -17,11 +17,7 @@ const cardCount = cards.length;
 let flipCardCount = 0;
 let stepCount = 0;
 
-shuffle();
-
-cards.forEach((card) => {
-    card.addEventListener('click', flipCard)
-})
+startGame();
 
 restart.addEventListener('click', startGame);
 
@@ -34,6 +30,8 @@ function startGame() {
     });
     resetCards();
     shuffle();
+    flipCardCount = 0;
+    stepCount = 0;
 }
 
 function shuffle() {
@@ -64,7 +62,6 @@ function checkForMatch() {
     if (firstCard.dataset.animal === secondCard.dataset.animal) {
         disableCards();
         flipCardCount += 2;
-        console.log(flipCardCount);
         if (flipCardCount === cardCount) {
             finishGame();
         }
@@ -86,7 +83,7 @@ function unflipCards() {
 }
 
 function resetCards() {
-    [firstCard, secondCard, cardsBlocked] = [null, null, false];
+    [firstCard, secondCard, cardsBlocked, hasFlippedCard] = [null, null, false, false];
 }
 
 function finishGame() {
