@@ -25,6 +25,17 @@ cards.forEach((card) => {
 
 restart.addEventListener('click', startGame);
 
+function startGame() {
+    resultBlock.classList.remove('result--visible');
+    body.style.backgroundColor = '#99CCFF';
+    cards.forEach((card) => {
+        card.classList.remove('card--flip');
+        card.addEventListener('click', flipCard);
+    });
+    resetCards();
+    shuffle();
+}
+
 function shuffle() {
     cards.forEach((card) => {
         let numRandom = Math.floor(Math.random() * 30);
@@ -53,6 +64,7 @@ function checkForMatch() {
     if (firstCard.dataset.animal === secondCard.dataset.animal) {
         disableCards();
         flipCardCount += 2;
+        console.log(flipCardCount);
         if (flipCardCount === cardCount) {
             finishGame();
         }
