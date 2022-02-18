@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header class="header">
-        Memory game
-    </header>
+    <header class="header">Memory game</header>
     <main class="game">
         <section class="game__cards cards" data-js="cards-container">
             <div class="cards__item card" data-js="card" data-animal="bee"><img src="./assets/svg/bee.svg" alt="bee" class="card__img card-img card-img--front"><img src="./assets/svg/back-card.svg" alt="card-back" class="card__img card-img card-img--back"></div>
@@ -46,7 +44,10 @@
         </section>
         <section class="game__result result" data-js="result-block">
             <div class="result__score" data-js="current-score"></div>
-            <div class="result__table" data-js="result-table"></div>
+            <div class="result__table result-table">
+                <h2 class="result-table__title">Результаты последних 10 игр</h2>
+                <div class="result-table__score" data-js="result-table"></div>
+            </div>
         </section>
     </main>
     <footer class="footer">

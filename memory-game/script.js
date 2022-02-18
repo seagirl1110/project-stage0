@@ -86,5 +86,5 @@ function getResults() {
     }
     results.push(stepCount);
     localStorage.setItem('score', JSON.stringify(results));
-    resultTable.innerHTML = `${results.map((el, index) => `Игрок ${index + 1}: количество шагов - ${el}`).join('<br>')}`;
+    resultTable.innerHTML = `${results.map((el, index) => `Игрок ${index + 1}: количество шагов - ${el}`).slice(-10).join('<br>')}`;
 }
