@@ -80,9 +80,11 @@ function finishGame() {
 }
 
 function getResults() {
-    const results = localStorage.getItem('score');
-    
-    localStorage.setItem('score', stepCount);
-    
-    resultTable.innerHTML = `${results}`
+    let results = JSON.parse(localStorage.getItem('score'));
+    if (!Array.isArray(results)) {
+        results = [];
+    }
+    results.push(stepCount);
+    localStorage.setItem('score', JSON.stringify(results));
+    resultTable.innerHTML = `${results.map((el, index) => `Игрок ${index + 1}: количество шагов - ${el}`).join('<br>')}`;
 }
