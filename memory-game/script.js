@@ -1,6 +1,7 @@
 const body = document.querySelector('body');
 const resultBlock = body.querySelector('[data-js="result-block"]')
-const score = resultBlock.querySelector('[data-js="score"]');
+const currentScore = resultBlock.querySelector('[data-js="current-score"]');
+const resultTable = resultBlock.querySelector('[data-js="result-table"]');
 
 const cards = body.querySelectorAll('[data-js="card"]');
 
@@ -9,7 +10,7 @@ let cardsBlocked = false;
 let firstCard;
 let secondCard;
 
-const cardCount = 6;
+const cardCount = cards.length;
 let flipCardCount = 0;
 let stepCount = 0;
 
@@ -74,5 +75,14 @@ function resetCards() {
 function finishGame() {
     body.style.backgroundColor = '#6699FF';
     resultBlock.classList.add('result--visible');
-    score.innerHTML = `Количество ходов, за которое Вы прошли игру: ${stepCount}`;
+    currentScore.innerHTML = `Количество ходов, за которое Вы прошли игру: ${stepCount}`;
+    getResults();
+}
+
+function getResults() {
+    const results = localStorage.getItem('score');
+    
+    localStorage.setItem('score', stepCount);
+    
+    resultTable.innerHTML = `${results}`
 }
