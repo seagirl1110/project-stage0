@@ -63,7 +63,7 @@ function checkForMatch() {
         disableCards();
         flipCardCount += 2;
         if (flipCardCount === cardCount) {
-            finishGame();
+            setTimeout(() => finishGame(), 300)
         }
     } else { unflipCards() }
 }
@@ -85,20 +85,22 @@ function unflipCards() {
 function resetCards() {
     [firstCard, secondCard, cardsBlocked, hasFlippedCard] = [null, null, false, false];
 }
-
 function finishGame() {
     body.style.backgroundColor = '#6699FF';
+    const gamerName = prompt('Введите ваше имя');
+    const currentGamer = {};
+    currentGamer[gamerName] = stepCount;
     resultBlock.classList.add('result--visible');
     currentScore.innerHTML = `Количество ходов, за которое Вы прошли игру: ${stepCount}`;
-    getResults();
+    getResults(currentGamer);
 }
 
-function getResults() {
+function getResults(gamer) {
     let results = JSON.parse(localStorage.getItem('score'));
     if (!Array.isArray(results)) {
         results = [];
     }
-    results.push(stepCount);
+    results.push(gamer);
     localStorage.setItem('score', JSON.stringify(results));
-    resultTable.innerHTML = `${results.map((el, index) => `Игрок ${index + 1}: количество шагов - ${el}`).slice(-10).join('<br>')}`;
+    resultTable.innerHTML = `${results.map((el) => `${Object.keys(el)}: количество шагов - ${Object.values(el)}`).slice(-10).join('<br>')}`;
 }

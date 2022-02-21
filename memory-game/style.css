@@ -29,8 +29,7 @@ body {
 
 .game {
     position: relative;
-    /* margin: 20px 0 auto; */
-    margin: 20px 0 80px;
+    margin: 40px 0 auto;
 }
 
 .game__cards {
@@ -131,13 +130,19 @@ body {
     display: block;
     margin: 5px auto;
     padding: 10px;
-    width: 100px;
+    width: 150px;
     cursor: pointer;
     outline: none;
     border-radius: 5px;
     border: none;
     font-family: 'Comfortaa', cursive;
     font-size: 18px;
+    background-color: #FFEFD5;
+}
+
+.result__btn-restart:hover {
+    background-color: #FAEBD7;
+    box-shadow: 0 0 10px #99CCFF;
 }
 
 .footer__container {
