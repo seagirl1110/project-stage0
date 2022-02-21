@@ -121,9 +121,19 @@ body {
     text-align: center;
 }
 
-.result-table__score {
-    width: 400px;
-    margin: 0 auto;
+.result-table__gamers {
+    margin: 0;
+    list-style: none;
+}
+
+.gamers__gamer {
+    margin: 0;
+    padding: 0 10px 0 40px;
+}
+
+.gamers__gamer--current {
+    border: 5px solid #99CCFF;
+    padding: 0 5px 0 35px;
 }
 
 .result__btn-restart {
