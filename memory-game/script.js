@@ -102,7 +102,7 @@ function getResults(gamer) {
     }
     results.push(gamer);
     localStorage.setItem('score', JSON.stringify(results));
-    resultTable.innerHTML = `${results.map((el) => {
+    resultTable.innerHTML = `${results.sort((a, b) => Object.values(a) - Object.values(b)).map((el) => {
         return el === gamer ? `<li class="gamers__gamer gamers__gamer--current">${Object.keys(el)}: количество шагов - ${Object.values(el)}</li>` : `<li class="gamers__gamer">${Object.keys(el)}: количество шагов - ${Object.values(el)}</li>`
     })
     .slice(-10).join('')}`;
