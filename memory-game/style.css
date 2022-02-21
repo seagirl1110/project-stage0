@@ -16,6 +16,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
+    padding: 0 15px;
 }
 
 .header {
@@ -25,6 +26,7 @@ body {
     margin: 0 auto;
     text-align: center;
     font-size: 32px;
+    font-weight: bold;
 }
 
 .game {
@@ -94,7 +96,7 @@ body {
 }
 
 .result__score {
-    width: 600px;
+    max-width: 600px;
     margin: 10px auto;
     box-shadow: 0 0 10px #FFEFD5;
     border-radius: 10px;
@@ -107,7 +109,7 @@ body {
 }
 
 .result-table {
-    width: 500px;
+    max-width: 500px;
     box-shadow: 0 0 10px #FFEFD5;
     border-radius: 10px;
     padding: 20px;
@@ -127,13 +129,13 @@ body {
 }
 
 .gamers__gamer {
-    margin: 0;
-    padding: 0 10px 0 40px;
+    margin: 5px 0;
+    padding: 0 5px 0 20px;
 }
 
 .gamers__gamer--current {
-    border: 5px solid #99CCFF;
-    padding: 0 5px 0 35px;
+    border: 3px solid #99CCFF;
+    padding: 0 5px 0 15px;
 }
 
 .result__btn-restart {
