@@ -1,3 +1,16 @@
+const card = document.createElement('div');
+    card.classList.add('card');
+    card.dataset.js = 'card';
+    card.innerHTML = `<img src="./assets/svg/front-card/hedgehog.svg" alt="" class="card-img">`;
+    
+    const body = document.querySelector('body');
+
+const cardsWrapper = body.querySelector('[data-js="cards-container"]');
+cardsWrapper.append(card);
+
+
+
+
 const body = document.querySelector('body');
 
 const cards = body.querySelectorAll('[data-js="card"]');
